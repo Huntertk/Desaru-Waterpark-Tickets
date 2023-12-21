@@ -39,8 +39,8 @@ export const createBooking = async (req, res) => {
                 },
             ],
             mode: 'payment',
-            success_url: `https://wetworld.malaysia-experience.com/${responseClientUrl}`,
-            cancel_url: 'https://wetworld.malaysia-experience.com/',
+            success_url: `https://desaru-waterpark.onrender.com/${responseClientUrl}`,
+            cancel_url: 'https://desaru-waterpark.onrender.com/',
             payment_intent_data: {
                 setup_future_usage: 'off_session',
                 description: 'Booking payment',
