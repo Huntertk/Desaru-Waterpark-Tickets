@@ -58,13 +58,37 @@ const bookingSlice = createSlice({
             state.seniorCount = state.seniorCount - 1
         },
         adultTotalAmount: (state) => {
-            state.adultTotal = state.adultCount *  state.pricing.adult
+            if(state.type === 'bookTypeOne'){
+                if(state.pref === "Malaysian Citizens") {
+                    state.adultTotal = state.adultCount *  state.pricing.malaysian.adult
+                    return
+                } else {
+                    state.adultTotal = state.adultCount *  state.pricing.nonMalaysian.adult
+                }
+
+            } 
         },
         childTotalAmount: (state) => {
-            state.childTotal = state.childCount *  state.pricing.child
+            if(state.type === 'bookTypeOne'){
+                if(state.pref === "Malaysian Citizens") {
+                    state.childTotal = state.childCount *  state.pricing.malaysian.child
+                    return
+                } else {
+                    state.childTotal = state.childCount *  state.pricing.nonMalaysian.child
+                }
+
+            }
         },
         seniorTotalAmount: (state) => {
-            state.seniorTotal = state.seniorCount *  state.pricing.senior
+            if(state.type === 'bookTypeOne'){
+                if(state.pref === "Malaysian Citizens") {
+                    state.seniorTotal = state.seniorCount *  state.pricing.malaysian.senior
+                    return
+                } else {
+                    state.seniorTotal = state.seniorCount *  state.pricing.nonMalaysian.senior
+                }
+
+            }
         },
         countTotalBookingAmount: (state, action) => {
             state.totalAmount = state.adultTotal + state.childTotal + state.seniorTotal
@@ -90,6 +114,9 @@ const bookingSlice = createSlice({
             state.loading  = true
             state.bookingResponse = ""
             
+        },
+        setPreference: (state, action) => {
+            state.pref = action.payload.pref
         },
         bookingSucess: (state, action) => {
             state.loading  = false

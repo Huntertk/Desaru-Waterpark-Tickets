@@ -11,6 +11,7 @@ import {Navigate, useNavigate} from 'react-router-dom'
 import PaxModal from './PaxModal';
 import axios from 'axios'
 import moment from 'moment';
+import PreferenceTour from './PreferenceTour';
 
 
 function isPastDate(date) {
@@ -101,7 +102,7 @@ const DateBtn = ({setSelectedDate, setCalenderOpen,selectedDate, calenderOpen, d
 
 const BookingDateConfirmation = () => {
     const dispatch = useDispatch()
-    const {isPaxModal, bookingDate, type,bookingTitle} = useSelector(store => store.booking)
+    const {isPaxModal, bookingDate, type,bookingTitle, pref} = useSelector(store => store.booking)
         const [selectedDate, setSelectedDate] = useState("")
         const [calenderOpen, setCalenderOpen] = useState(false)
         const [blockedDates, setBlockedDates] = useState([])
@@ -158,18 +159,26 @@ const BookingDateConfirmation = () => {
             disabled={disabledDates}
             />
             </div>
+            {
+                selectedDate && type === 'bookTypeOne' && <PreferenceTour day={selectedDate?.toString()?.split(' ')[0]} /> 
+            }
+            {/* <PreferenceTour /> */}
             <div className="selectedDate">
                 {
                     selectedDate ? <>
                     <div className='prefrenceAndDateContainer'>
-                        <p>{bookingTitle}</p>
+                        <p>{
+                            type === 'bookTypeOne' && pref 
+                        }</p>
                     <p>You selected {format(selectedDate, 'PPP')}.</p>
                     </div>
-                        <button onClick={() => {
+                    {
+                        type === 'bookTypeOne' && pref ? <button onClick={() => {
                             dispatch(setBookingDate({selectedBookingDate:format(selectedDate, 'PPP'), selectedDay: selectedDate.toString()}))
                             dispatch(openPaxModel())
                             setCalenderOpen(false)
-                        }}>Next</button> 
+                        }}>Next</button> : <></>
+                    }
                     </> : <p>Select One Date</p>
                 }
             </div>

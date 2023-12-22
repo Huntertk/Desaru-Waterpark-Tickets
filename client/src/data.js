@@ -18,16 +18,46 @@ export const cardData = [
         desc:"Explore the over 20 wet and dry slides and one of the largest wave pools in Southeast Asia with unlimited access to all rides.",
         type:"bookTypeOne",
         pricing: {
-            adult:78,
-            child:77,
-            senior:77
+            malaysian:{
+                adult:85,
+                child:67,
+                senior:67,
+            },
+            nonMalaysian:{
+                adult:135,
+                child:115,
+                senior:115,
+            }
         },
 
     },
     
 ]
 
+export const preferenceData = [
+    
+    {
+        id: uuidv4(),
+        title: "Malaysian Citizens",
+        price: 85,
+        details:[
+            "Skip-the-line admission into Aquaria KLCC", 
+            "Access to all exhibits",
+            "Valid only for Malaysian Citizens"
+        ]
+    },
 
+    {
+        id: uuidv4(),
+        title: "Non Malaysian Citizens",
+        price: 115,
+        details:[
+            "Skip-the-line admission into Aquaria KLCC", 
+            "Access to all exhibits",
+            "Valid only for Non Malaysian Citizens"
+        ]
+    },  
+]
 
 
 
