@@ -41,8 +41,6 @@ export const preferenceData = [
         title: "Malaysian Citizens",
         price: 85,
         details:[
-            "Skip-the-line admission into Aquaria KLCC", 
-            "Access to all exhibits",
             "Valid only for Malaysian Citizens"
         ]
     },
@@ -52,8 +50,6 @@ export const preferenceData = [
         title: "Non Malaysian Citizens",
         price: 115,
         details:[
-            "Skip-the-line admission into Aquaria KLCC", 
-            "Access to all exhibits",
             "Valid only for Non Malaysian Citizens"
         ]
     },  
