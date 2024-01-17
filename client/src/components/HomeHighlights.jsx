@@ -19,7 +19,7 @@ const Cards = () => {
 const HomeHighlights = () => {
   return (
     <section className='HomeHighlightsMainContainer'>
-        <h1>Things you must try at Desaru Waterpark Tickets</h1>
+        <h1>Things you must try at Adventure Waterpark Desaru Coast</h1>
         <div className="cardMainContainer">
             <Cards />
         </div>

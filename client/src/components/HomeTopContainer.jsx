@@ -7,7 +7,7 @@ const HomeTopContainer = () => {
   return (
     <section className='HomeTopContainer'>
         <div className="content">
-            <h1>Book Desaru Waterpark Tickets</h1> 
+            <h1>Book ticket Adventure Waterpark Desaru Coast</h1> 
             <p>Travelvago is an authorized and trusted partner of the venue, offering curated experiences to enjoy this attraction.</p>
         </div>
         <div className="homeTopImgContainer">

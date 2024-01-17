@@ -126,7 +126,7 @@ const BookingDateConfirmation = () => {
                 getBlockDates()
                 return
             }
-          },[selectedDate])
+          },[])
 
         if(!type){
             return <Navigate to="/" />

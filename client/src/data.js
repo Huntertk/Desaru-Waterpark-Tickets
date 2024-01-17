@@ -14,7 +14,7 @@ export const cardData = [
             "https://i.postimg.cc/XqmBWh5v/7.jpg",
             "https://i.postimg.cc/W1MqR512/9.jpg"
         ],
-        title:"Desaru Waterpark Adventure Coast",
+        title:"Adventure Waterpark Desaru Coast",
         desc:"Explore the over 20 wet and dry slides and one of the largest wave pools in Southeast Asia with unlimited access to all rides.",
         type:"bookTypeOne",
         pricing: {
@@ -143,18 +143,18 @@ export const addQues = [
 export const homeFAQ = [
     {
         id: uuidv4(),
-        ques:"Can I bring food inside Desaru Waterpark Adventure Coast?",
+        ques:"Can I bring food inside Adventure Waterpark Desaru Coast ?",
         ans:"No. Food and drinks is prohibited inside."
     },
     {
         id: uuidv4(),
-        ques:"How long can I stay inside Desaru Waterpark Adventure Coast?",
+        ques:"How long can I stay inside Adventure Waterpark Desaru Coast ?",
         ans:"You may stay as long as you want, no time limit."
     },
     {
         id: uuidv4(),
-        ques:"When does Desaru Waterpark Adventure Coast close?",
-        ans:"Desaru Waterpark Adventure Coast is close every Tuesday except Public Holiday and School Holiday."
+        ques:"When does Adventure Waterpark Desaru Coast Coast close?",
+        ans:"Adventure Waterpark Desaru Coast is close every Tuesday except Public Holiday and School Holiday."
     },
     {
         id: uuidv4(),

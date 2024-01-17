@@ -18,7 +18,7 @@ const HomeWhatsIncluded = () => {
         <div className="whatsincludedSubContainer">
             <h1>Inclusions</h1>
             <ul className="content">
-                <li>Admission to Desaru Waterpark Adventure Coast</li>
+                <li>Admission to Adventure Waterpark Desaru Coast</li>
             </ul>
         </div>
         <div className="whatsNotincludedSubContainer">

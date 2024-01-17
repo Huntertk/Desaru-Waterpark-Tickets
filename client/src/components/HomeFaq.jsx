@@ -11,7 +11,7 @@ import QuestionContainer from './QuestionContainer';
 const HomeFaq = () => {
   return (
     <section className='homeFAQMainContainer'>
-        <h1>Frequently Asked Questions About Desaru Waterpark Tickets</h1>
+        <h1>Frequently Asked Questions About Adventure Waterpark Desaru Coast</h1>
         <div className="questionMainContainer">
             {
                 homeFAQ.map((data) => {
